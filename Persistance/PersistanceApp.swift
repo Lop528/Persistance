@@ -11,7 +11,7 @@ import SwiftUI
 struct PersistanceApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ToDoListView()
         }
     }
 }

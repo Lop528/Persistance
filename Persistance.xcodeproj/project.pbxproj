@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		C6FD300E2C7E18D1006B0688 /* PersistanceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FD300D2C7E18D1006B0688 /* PersistanceApp.swift */; };
-		C6FD30102C7E18D1006B0688 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FD300F2C7E18D1006B0688 /* ContentView.swift */; };
+		C6FD30102C7E18D1006B0688 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FD300F2C7E18D1006B0688 /* ToDoListView.swift */; };
 		C6FD30122C7E18D3006B0688 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6FD30112C7E18D3006B0688 /* Assets.xcassets */; };
 		C6FD30152C7E18D3006B0688 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6FD30142C7E18D3006B0688 /* Preview Assets.xcassets */; };
+		C6FD301C2C7E1A60006B0688 /* CollegeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FD301B2C7E1A60006B0688 /* CollegeListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C6FD300A2C7E18D1006B0688 /* Persistance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Persistance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6FD300D2C7E18D1006B0688 /* PersistanceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceApp.swift; sourceTree = "<group>"; };
-		C6FD300F2C7E18D1006B0688 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C6FD300F2C7E18D1006B0688 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 		C6FD30112C7E18D3006B0688 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6FD30142C7E18D3006B0688 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C6FD301B2C7E1A60006B0688 /* CollegeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				C6FD300D2C7E18D1006B0688 /* PersistanceApp.swift */,
-				C6FD300F2C7E18D1006B0688 /* ContentView.swift */,
+				C6FD300F2C7E18D1006B0688 /* ToDoListView.swift */,
+				C6FD301B2C7E1A60006B0688 /* CollegeListView.swift */,
 				C6FD30112C7E18D3006B0688 /* Assets.xcassets */,
 				C6FD30132C7E18D3006B0688 /* Preview Content */,
 			);
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6FD30102C7E18D1006B0688 /* ContentView.swift in Sources */,
+				C6FD301C2C7E1A60006B0688 /* CollegeListView.swift in Sources */,
+				C6FD30102C7E18D1006B0688 /* ToDoListView.swift in Sources */,
 				C6FD300E2C7E18D1006B0688 /* PersistanceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
