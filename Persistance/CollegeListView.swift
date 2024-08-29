@@ -10,18 +10,35 @@ import SwiftUI
 struct CollegeListView: View {
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 5)
-                .ignoresSafeArea()
-                .foregroundColor(.orange)
-            RoundedRectangle(cornerRadius:45)
-                .foregroundColor(.white)
-                .frame(width: 365,height: 825)
-                .offset(y: -12)
+            ZStack {
+                       // White background
+                       Color.white
+                           .edgesIgnoringSafeArea(.all)
+                       
+                     
+                       RoundedRectangle(cornerRadius: 20)
+                           .stroke(Color.orange, lineWidth: 6)
+                           .background(
+                               RoundedRectangle(cornerRadius: 20)
+                                   .fill(Color.white)
+                           )
+                           .shadow(color: Color.orange.opacity(0.5), radius: 10, x: 0, y: 5)
+                           .padding(20)
+                   }
+
             
             VStack {
                 Text("Colleges")
-                
+                    .bold()
+                    .foregroundColor(.black)
+                    .font(.largeTitle)
+                    .dynamicTypeSize(.xxxLarge)
+                    .padding()
+                    
+                Spacer()
             }
+            .offset(y: 30)
+            
         }
     }
 }
