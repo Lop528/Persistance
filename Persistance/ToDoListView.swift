@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ToDoListView.swift
 //  Persistance
 //
 //  Created by Liam K. Seymour on 8/27/24.
@@ -10,22 +10,30 @@ import SwiftUI
 struct ToDoListView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 15)
-                .ignoresSafeArea()
-                .foregroundColor(.orange)
-            RoundedRectangle(cornerRadius: 45)
-                .foregroundColor(.white)
-                .frame(width: 365, height: 825)
-                .offset(y: -12)
+            ZStack {
+                       Color.white
+                           .ignoresSafeArea()
+                       
+                     
+                       RoundedRectangle(cornerRadius: 55)
+                           .stroke(Color.orange, lineWidth: 50)
+                           .ignoresSafeArea()
+                           .background(
+                               RoundedRectangle(cornerRadius: 55)
+                                   .fill(Color.white)
+                                   .ignoresSafeArea()
+
+                           )
+                           .shadow(color: Color.orange.opacity(0.5), radius: 10, x: 0, y: 5)
+                           .ignoresSafeArea()
+
+                   }
             VStack {
                 ZStack {
-                    RoundedRectangle(cornerRadius: 15)
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.orange)
-                        .shadow(color: .orange, radius: 10)
                     Text("To Do List")
+                        .font(.custom("American Typewriter", size: 55))
                 }
-                .offset(y: 30)
+                Text("First Item")
                 Spacer()
                 
             }
