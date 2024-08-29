@@ -16,14 +16,17 @@ struct CollegeListView: View {
                            .edgesIgnoringSafeArea(.all)
                        
                      
-                       RoundedRectangle(cornerRadius: 20)
-                           .stroke(Color.orange, lineWidth: 6)
+                       RoundedRectangle(cornerRadius: 60)
+                           .stroke(Color.orange, lineWidth: 20)
+                           .ignoresSafeArea()
                            .background(
-                               RoundedRectangle(cornerRadius: 20)
+                               RoundedRectangle(cornerRadius: 45)
                                    .fill(Color.white)
                            )
-                           .shadow(color: Color.orange.opacity(0.5), radius: 10, x: 0, y: 5)
-                           .padding(20)
+                           .shadow(color: Color.orange.opacity(1), radius: 20, x: 0, y: 0)
+                           .padding(5)
+                           .ignoresSafeArea()
+                    
                    }
 
             
@@ -34,10 +37,11 @@ struct CollegeListView: View {
                     .font(.largeTitle)
                     .dynamicTypeSize(.xxxLarge)
                     .padding()
+                
                     
                 Spacer()
             }
-            .offset(y: 30)
+            .offset(y: 10)
             
         }
     }
