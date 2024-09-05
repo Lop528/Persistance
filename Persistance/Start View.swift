@@ -9,7 +9,22 @@ import SwiftUI
 
 struct Start_View: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                NavigationLink {
+                    CollegeListView()
+                } label: {
+                    Text("Colleges")
+                }
+                NavigationLink {
+                    ToDoListView()
+                } label: {
+                    Text("To Do List")
+                }
+            }
+        }
+        
+        
     }
 }
 

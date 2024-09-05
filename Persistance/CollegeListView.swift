@@ -31,6 +31,7 @@ struct CollegeListView: View {
                             .onTapGesture {
                                 colleges.remove(at: i)
                                 collegeClick.remove(at: i)
+                                tuitions.remove(at: i)
                             }
                         Spacer()
 //                        VStack {
