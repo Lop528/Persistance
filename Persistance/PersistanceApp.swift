@@ -11,7 +11,8 @@ import SwiftUI
 struct PersistanceApp: App {
     var body: some Scene {
         WindowGroup {
-            ToDoListView()
+            CollegeListView()
+                .modelContainer(for: College.self)
         }
     }
 }
