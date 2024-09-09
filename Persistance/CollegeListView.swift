@@ -13,10 +13,11 @@ struct CollegeListView: View {
     @Environment(\.modelContext) var context
     @Query var colleges: [College]
     
+    @Environment(\.modelContext) var context2
+    
     @State var collegeAdding = ""
-//    @State var colleges1 = ["University of Illinois", "UT", "Penn State"]
+    //    @State var colleges1 = ["University of Illinois", "UT", "Penn State"]
     @State var collegeClick = [false, false, false]
-    @State var tuitions = ["15,714", "41,070", "38,651"]
     @State var tuitionAdding = ""
     
     var body: some View {
@@ -33,7 +34,7 @@ struct CollegeListView: View {
                             Spacer()
                             Image(systemName: "info.circle")
                                 .foregroundColor(.cyan)
-
+                            
                         }
                         //                            .onTapGesture {
                         //                                colleges1.remove(at: i.college)
@@ -41,7 +42,7 @@ struct CollegeListView: View {
                         //                                tuitions.remove(at: i.college)
                         //                            }
                         //                                    collegeClick[i].toggle()
-
+                        
                         
                         
                     }
@@ -105,15 +106,19 @@ struct CollegeListView: View {
                         TextField("Add College", text: $collegeAdding)
                             .foregroundColor(.black)
                             .font(.custom("american", size: 20))
-                        TextField("Add Tuition", text: $tuitionAdding)
-                            .foregroundColor(.black)
-                            .font(.custom("american", size: 20))
+//                        TextField("Add Tuition", text: $tuitionAdding)
+//                            .foregroundColor(.black)
+//                            .font(.custom("american", size: 20))
                         Button() {
-                            let college = College(college: collegeAdding)
+                            let college = College(college: collegeAdding, tuition: tuitionAdding)
                             context.insert(college)
                             collegeAdding = ""
+                            
+                            //                            let tuition = Tuition(tuition: tuitionAdding)
+                            //                            context2.insert(tuition)
+                            //                            tuitionAdding = ""
                         } label: {
-                            Text("x")
+                            Text("+")
                                 .foregroundColor(.black)
                                 .font(.custom("american", size: 25))
                         }
@@ -136,9 +141,11 @@ struct CollegeListView: View {
 @Model
 class College {
     var college: String
+    var tuition: String
     
-    init(college: String) {
+    init(college: String, tuition: String) {
         self.college = college
+        self.tuition = tuition
     }
 }
 
@@ -147,4 +154,5 @@ class College {
 #Preview {
     CollegeListView()
         .modelContainer(for: College.self)
+    
 }

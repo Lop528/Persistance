@@ -8,21 +8,53 @@
 import SwiftUI
 
 struct Start_View: View {
+    
     var body: some View {
+        
+        
         NavigationView {
-            VStack {
-                NavigationLink {
-                    CollegeListView()
-                } label: {
-                    Text("Colleges")
-                }
-                NavigationLink {
-                    ToDoListView()
-                } label: {
-                    Text("To Do List")
+            
+            ZStack {
+                
+                RoundedRectangle(cornerRadius: 60)
+                    .stroke(Color.cyan, lineWidth: 12)
+                    .ignoresSafeArea()
+                    .background(
+                        RoundedRectangle(cornerRadius: 60)
+                            .fill(Color.clear)
+                    )
+                    .shadow(color: Color.blue.opacity(1), radius: 10, x: 0, y: 0)
+                    .padding(3)
+                    .ignoresSafeArea()
+                HStack{
+                    NavigationLink {
+                        CollegeListView()
+                    } label: {
+                        Image(systemName: "house")
+                            .font(.largeTitle)
+                            .padding()
+                    }
+                    NavigationLink {
+                        ToDoListView()
+                    } label: {
+                        Image(systemName: "book")
+                            .font(.largeTitle)
+                            .offset(y:1)
+                            .padding()
+                        NavigationLink {
+//                            TicTacToe()
+                        } label: {
+                            Image(systemName: "x.circle")
+                                .font(.largeTitle)
+                                .padding()
+                        }
+                    }
                 }
             }
+            
         }
+        
+        
         
         
     }
