@@ -72,6 +72,7 @@ struct ToDoListView: View {
                    }
             VStack {
                 
+                Text("To Do List")
 
                 
                 Spacer()
@@ -99,8 +100,8 @@ struct ToDoListView: View {
                         }
                     }
                     .frame(width: 350)
-                    DatePicker("Date", selection: $newItemDate, displayedComponents: .date)
-                        .labelsHidden()
+//                    DatePicker("Date", selection: $newItemDate, displayedComponents: .date)
+//                        .labelsHidden()
                 }
             }
         }
@@ -138,5 +139,5 @@ class ToDo {
 
 #Preview {
     ToDoListView()
-        .modelContainer(for: ToDo.self)
+        .modelContainer(for: ToDo.self, inMemory: true)
 }

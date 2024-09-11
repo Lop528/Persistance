@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct PersistanceApp: App {
     var body: some Scene {
         WindowGroup {
-            CollegeListView()
-                .modelContainer(for: College.self)
+            Start_View()
+                .modelContainer(for: College.self, inMemory: true)
+                .modelContainer(for: ToDo.self, inMemory: true)
         }
     }
 }

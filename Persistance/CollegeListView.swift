@@ -153,6 +153,6 @@ class College {
 
 #Preview {
     CollegeListView()
-        .modelContainer(for: College.self)
+        .modelContainer(for: College.self, inMemory: true)
     
 }

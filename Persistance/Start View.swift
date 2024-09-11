@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 struct Start_View: View {
     
@@ -41,13 +43,6 @@ struct Start_View: View {
                             .font(.largeTitle)
                             .offset(y:1)
                             .padding()
-                        NavigationLink {
-//                            TicTacToe()
-                        } label: {
-                            Image(systemName: "x.circle")
-                                .font(.largeTitle)
-                                .padding()
-                        }
                     }
                 }
             }
@@ -62,4 +57,6 @@ struct Start_View: View {
 
 #Preview {
     Start_View()
+        .modelContainer(for: College.self, inMemory: true)
+        .modelContainer(for: ToDo.self, inMemory: true)
 }
