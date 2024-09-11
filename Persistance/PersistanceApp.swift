@@ -13,8 +13,8 @@ struct PersistanceApp: App {
     var body: some Scene {
         WindowGroup {
             Start_View()
-                .modelContainer(for: College.self, inMemory: true)
                 .modelContainer(for: ToDo.self, inMemory: true)
+                .modelContainer(for: College.self, inMemory: true)
         }
     }
 }
